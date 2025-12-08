@@ -53,7 +53,7 @@ section {
   gap: 20px;
   text-align: center;
   margin-top: 20px;
-  max-width: 600px;   /* ancho máximo más angosto */
+  max-width: 400px;   /* más angosto para que se acomoden en 2x2 */
   margin-left: auto;
   margin-right: auto;
 }
@@ -61,17 +61,18 @@ section {
 .grid a {
   text-decoration: none;
   color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid img {
   width: 100%;          
-  max-width: 180px;     /* tamaño máximo más chico */
+  max-width: 150px;     /* más chico para que entren bien */
   height: auto;
   border-radius: 8px;
   border: 1px solid #ddd;
   transition: transform 0.2s ease;
-  margin: 0 auto;       /* centra la imagen dentro de la celda */
-  display: block;
 }
 
 .grid img:hover {
@@ -82,13 +83,13 @@ section {
   margin-top: 8px;
   font-weight: bold;
   color: #333;
-  font-size: 14px;      /* texto más pequeño */
+  font-size: 14px;
 }
 
 /* Responsive: en pantallas chicas se ve de a una columna */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr; /* una sola columna en móvil */
+    max-width: 300px;
   }
 }
-
