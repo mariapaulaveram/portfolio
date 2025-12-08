@@ -49,11 +49,11 @@ section {
 /* Galería de proyectos */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas en escritorio */
+  grid-template-columns: 1fr 1fr; /* exactamente 2 columnas */
   gap: 20px;
-  text-align: center;
+  justify-items: center;          /* centra cada item en su celda */
   margin-top: 20px;
-  max-width: 400px;   /* más angosto para que se acomoden en 2x2 */
+  max-width: 500px;               /* ancho máximo del bloque */
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,8 +67,7 @@ section {
 }
 
 .grid img {
-  width: 100%;          
-  max-width: 150px;     /* más chico para que entren bien */
+  width: 150px;       /* tamaño fijo más chico */
   height: auto;
   border-radius: 8px;
   border: 1px solid #ddd;
