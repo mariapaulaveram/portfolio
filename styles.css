@@ -49,10 +49,13 @@ section {
 /* Galería de proyectos */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en escritorio */
   gap: 20px;
   text-align: center;
   margin-top: 20px;
+  max-width: 600px;   /* ancho máximo más angosto */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid a {
@@ -61,11 +64,14 @@ section {
 }
 
 .grid img {
-  width: 100%;
+  width: 100%;          
+  max-width: 180px;     /* tamaño máximo más chico */
   height: auto;
   border-radius: 8px;
   border: 1px solid #ddd;
   transition: transform 0.2s ease;
+  margin: 0 auto;       /* centra la imagen dentro de la celda */
+  display: block;
 }
 
 .grid img:hover {
@@ -73,7 +79,16 @@ section {
 }
 
 .grid p {
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: bold;
   color: #333;
+  font-size: 14px;      /* texto más pequeño */
 }
+
+/* Responsive: en pantallas chicas se ve de a una columna */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* una sola columna en móvil */
+  }
+}
+
