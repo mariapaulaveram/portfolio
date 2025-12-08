@@ -53,7 +53,7 @@ section {
   gap: 30px;                      /* espacio entre imágenes */
   justify-items: center;          /* centra cada item en su celda */
   margin-top: 20px;
-  max-width: 900px;               /* más ancho para que las imágenes crezcan */
+  max-width: 1000px;              /* más ancho para que las imágenes crezcan */
   margin-left: auto;
   margin-right: auto;
 }
@@ -68,7 +68,7 @@ section {
 
 .grid img {
   width: 100%;
-  max-width: 300px;     /* ahora más grande */
+  max-width: 400px;     /* ahora el doble de tamaño (antes 200px aprox) */
   height: auto;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -83,7 +83,7 @@ section {
   margin-top: 10px;
   font-weight: bold;
   color: #333;
-  font-size: 16px;      /* texto un poco más grande */
+  font-size: 16px;
 }
 
 /* Responsive: en pantallas chicas se ve de a una columna */
@@ -91,5 +91,9 @@ section {
   .grid {
     grid-template-columns: 1fr; /* una sola columna en móvil */
     max-width: 400px;
+  }
+
+  .grid img {
+    max-width: 100%; /* ocupa todo el ancho en móvil */
   }
 }
