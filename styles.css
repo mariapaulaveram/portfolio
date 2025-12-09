@@ -63,7 +63,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* antes 280px */
   gap: 1.5rem;
-  max-width: 1200px; /* opcional: más ancho el contenedor */
+  max-width: 960px; 
   margin: 0 auto;
 }
 
