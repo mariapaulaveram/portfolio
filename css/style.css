@@ -592,7 +592,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
   .title {
@@ -631,11 +631,14 @@ h1, h2, h3, h4, h5, h6, figure {
     padding-left: 0;
   }
 }
+.author .desc p {
+  font-size: 15px;
+}
 .author .desc span {
   font-size: 13px;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   letter-spacing: 1px;
 }
 .author .desc .fh5co-social-icons li a {
